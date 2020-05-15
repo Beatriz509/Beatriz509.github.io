@@ -1,0 +1,157 @@
+/* RETIRAR AS PREDEFINIÇÕES MARGIN E PADDING QUE O BROWSER FAZ */
+/* o '*' significa todas as tags */
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeaea;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+header {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+header span {
+    width: 41.66%;
+    display: inline-block;
+    height: 50px;
+    background-color: #1f2833;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+header nav {
+    width: 58.33%;
+    height: 50px;
+    background-color: #ec6354;
+    float: right;
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 35px;
+    padding-top: 15px;
+    list-style-type: none;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul li.ativo {
+    border-bottom: 2px solid #1f2833;
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* IMAGEM DA PÁGINA PRINCIPAL com o efeito de opacidade */
+
+#inicial img {
+    margin-left: 16.66%;
+height: 803px
+
+   
+}
+
+#inicial img:hover {
+    opacity: 1;
+}
+
+/* TÍTULO BEATRIZ ARRUDA */
+
+#inicial h1 {
+    width: 33.33%; /* 4 colunas */
+    font-size: 55px;
+    color: white;
+
+    /* sombra 4px para a direita e 4px para baixo */
+    text-shadow: 4px 4px #000000;
+
+    /* posição absolute para ter 50% do top e 40% da esquerda */
+    position: absolute;
+    top: 480px;
+    left: 50%; /* 6 colunas da esquerda */
+}
+/* LEGENDA ESTUDANTE DE DESIGN */
+
+#inicial div {
+    width: 25%; /* largura de 3 colunas */
+    text-align: center;
+    /* display inline-block e position absolute para aplicar o left e o top */
+    display: inline-block;
+    position: absolute;
+    left: 58.33%;
+    top: 580px;
+    /*cor de texto branco, cor de fundo e cor da sombra no box-shadow */
+    color: white;
+    background-color: #ec6354;
+    padding: 15px;
+    font-weight: bold;
+    box-shadow: -14px 14px #e59d98;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #f0f0f0;
+    height: 60px;
+}
+
+/* float right do ul para ir para a direita, float left de cada li para não alterar a ordem */
+
+footer ul {
+    /* margem à direita do ul */
+    margin-right: 15%;
+    margin-top: 10px;
+    float: right;
+}
+
+footer ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 13px;
+}
+
+footer ul li img {
+    height: 40px;
+    opacity: 0.6;
+}
+
+footer ul li img:hover {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    header span {
+        width: 100%;
+    }
+    header nav {
+        width: 100%;
+    }
+    header ul li {
+        margin: 0px 10px;
+    }
+    #projetos .quadrados {
+        top: 120px;
+    }
+    #projetos ul {
+        width: 100%;
+        margin-left: 0;
+    }
+}

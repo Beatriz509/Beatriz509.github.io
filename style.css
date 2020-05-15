@@ -1,0 +1,430 @@
+/* RETIRAR AS PREDEFINIÇÕES MARGIN E PADDING QUE O BROWSER FAZ */
+/* o '*' significa todas as tags */
+
+* {
+	margin: 0;
+    padding: 0;
+
+    /* box-sizing para ter a certeza que os padding e border ficam incluído na largura total */
+    box-sizing: border-box;
+}
+
+/* largura das 12 colunas retirado do site www.w3schools.com */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeaea;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+header {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+header span {
+    width: 41.66%; /* 5 colunas */
+    display: inline-block;
+    height: 50px;
+    background-color: #1f2833;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+header nav {
+    width: 58.33%; /* 7 colunas */
+    height: 50px;
+    background-color: #ec6354;
+    float: right;
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 35px;
+    padding-top: 15px;
+    list-style-type: none;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    
+    /*risco em baixo*/
+}
+
+header ul li.ativo {
+    border-bottom: 2px solid #1f2833;
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* IMAGEM DA PÁGINA PRINCIPAL com o efeito de opacidade */
+
+#inicial img {
+    margin-left: 16.66%; /* 2 colunas */
+    opacity: 0.6;
+    width: 50%; /* a imagem ocupa 6 colunas de largura */
+}
+
+#inicial img:hover {
+    opacity: 1;
+}
+
+/* TÍTULO BEATRIZ ARRUDA */
+
+#inicial h1 {
+    width: 33.33%; /* 4 colunas */
+    font-size: 55px;
+    color: white;
+
+    /* sombra 4px para a direita e 4px para baixo */
+    text-shadow: 4px 4px #000000;
+
+    /* posição absolute para ter 50% do top e 40% da esquerda */
+    position: absolute;
+    top: 600px;
+    left: 50%; /* 6 colunas da esquerda */
+}
+
+/* LEGENDA ESTUDANTE DE DESIGN */
+
+#inicial div {
+    width: 25%; /* largura de 3 colunas */
+    text-align: center;
+    /* display inline-block e position absolute para aplicar o left e o top */
+    display: inline-block;
+    position: absolute;
+    left: 58.33%;
+    top: 700px;
+    /*cor de texto branco, cor de fundo e cor da sombra no box-shadow */
+    color: white;
+    background-color: #ec6354;
+    padding: 15px;
+    font-weight: bold;
+    box-shadow: -14px 14px #e59d98;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #f0f0f0;
+    height: 60px;
+}
+
+/* float right do ul para ir para a direita, float left de cada li para não alterar a ordem */
+
+footer ul {
+    /* margem à direita do ul */
+    margin-right: 15%;
+    margin-top: 10px;
+    float: right;
+}
+
+footer ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 13px;
+}
+
+footer ul li img {
+    height: 40px;
+    opacity: 0.6;
+}
+
+footer ul li img:hover {
+    opacity: 1;
+}
+
+
+/* PÁGINA SOBRE MIM */
+
+#sobremim {
+    margin-top: 50px;
+}
+
+#sobremim img.sobremim {
+    width: 33.33%; /* largura de 4 colunas */
+    margin-left: 8.33%; /* margem de 1 coluna */
+}
+
+#sobremim aside {
+    position: absolute;
+    margin-left: 50%; /* margem de 6 colunas */
+    width: 41.66%; /* largura de 5 colunas */
+    top: 150px;
+    max-height: 500px;
+    margin-bottom: 300px;
+}
+
+#sobremim h1 {
+    margin-bottom: 10px;
+    display: inline-block;
+    /* o linear-gradient para a cor de fundo do título */
+    background-image: linear-gradient(transparent 16px, #e59d98 16px);
+}
+
+#sobremim h2 {
+    font-size: 19px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-image: linear-gradient(transparent 13px, #e59d98 13px);
+}
+
+#sobremim p {
+    font-size: 1em; /* 1em é igual a 16px */
+    line-height: 1.5; /* espaçamento entre linhas */
+    text-align: justify;
+}
+
+.profissionais {
+    margin-top: 90px;
+    text-align: center;
+    height: auto;
+}
+
+.profissionais h2 {
+    display: inline-block;
+    font-size: 19px;
+}
+
+.profissionais .skills {
+    margin-top: 45px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.profissionais .skills img {
+    width: 8.33%; /* largura de 1 coluna */
+    /* espaçamento entre as colunas total de 20px */
+    margin: 0 5px 0 5px;
+    padding: 0 5px 0 5px;
+}
+
+.profissionais .skills span {
+    display: inline-block;
+    width: 8.33%;
+    /* espaçamento entre as colunas total de 20px */
+    margin: 0 5px 0 5px;
+    padding: 0 5px 0 5px;
+}
+
+
+/* PÁGINA TODOS OS PROJETOS */
+
+#projetos {
+    text-align: center;
+}
+
+#projetos h1 {
+    margin-top: 50px;
+    display: inline-block;
+    background-image: linear-gradient(transparent 17px, #e59d98 17px);
+    width: 33.33%; /* largura de 4 colunas */
+    font-size: 35px;
+}
+
+#projetos span {
+    background-color: #e59d98;
+    display: inline-block;
+    width: 33.33%; /* largura de 4 colunas */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#projetos .quadrados {
+    position: absolute;
+    left: 67%;
+    top: 90px;
+}
+
+#projetos ul {
+    margin-top: 40px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#projetos ul li {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline;
+    margin: 15px;
+}
+
+#projetos ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#projetos ul li a:hover {
+    border-bottom: 2px solid #e59d98;
+}
+/* PRODUTO */
+#projetos ul li.ativo {
+    border-bottom: 2px solid #1f2833;
+}
+
+#projetos .fotos-projetos {
+    margin-top: 25px;
+}
+
+#projetos .fotos-projetos img {
+    width: 25%; /* largura de 3 colunas para cada caixa */
+
+    /* espaçamento entre as colunas total de 20px */
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+#projetos .fotos-projetos img:hover {
+ outline: 2px solid black;
+    outline-offset: -5px;
+}
+
+/* BOTÃO VER MAIS */
+
+#projetos .ver-mais {
+    width: 25%; /* largura de 3 colunas */
+    margin: 0 auto; /* margin 0 auto para centrar o botão */
+    
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    color: black;
+    background-color: #e59d98;
+    box-shadow: -14px 14px #ed6354; /* sombra da caixa */
+
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+#projetos .ver-mais:hover {
+
+    color: black;
+    background-color: #c4c4c4;
+    box-shadow: -14px 14px #ed6354; /* sombra da caixa */
+
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+/* PÁGINA PROJETO PRODUTO DETALHADO */
+
+#projetos h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+
+#projetos .fotos-projeto img:hover {
+    cursor: pointer; /* para aparecer a mãozinha por cima */
+    box-sizing: none;
+    /* border do no hover */
+    outline: 2px solid black;
+    outline-offset: -2px;
+}
+
+#projetos .imagem-vertical {
+    width: 25%; /* largura de 3 colunas para as imagens verticais */
+    /* espaçamento entre as colunas total de 20px */
+    margin: 5px 10px 5px 10px;
+}
+
+#projetos .imagem-horizontal {
+    width: 33.33%; /* largura de 4 colunas para as imagens horizontais */
+    /* espaçamento entre as colunas total de 20px */
+    margin: 5px 5px 5px 5px;
+}
+
+#projetos .position-absolute {
+    /* posição absolute e aproximadamente 33% margem da esquerda para os dois quadrados horizontais ficarem alinhados */
+    position: absolute;
+    left: 32.87%;
+}
+
+#projetos h3 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    --font-size: 28px;
+
+    display: inline-block;
+    background-image: linear-gradient(transparent 14px, #e59d98 14px);
+    width: 20%;
+    padding-bottom: 6px;
+}
+
+#projetos .descricao {
+    column-count: 2;
+    text-align: justify;
+    width: 83.33%;
+    margin-left: 8.33%;
+}
+
+#projetos .obrigada {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* PÁGINA PROJETO PRODUTO  */
+#projetos .imagens-projeto {
+    margin-top: 25px
+   }     
+
+#projetos .imagens-projeto img {
+    width: 41.66% 
+        margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+        cursor:pointer;
+   }     
+#projetos .imagens-projeto img:hover {
+    outline:  2px solid black;
+    outline-offset: -6px;
+    
+ }
+@media only screen and (max-width: 768px) {
+    header span {
+        width: 100%;
+    }
+    header nav {
+        width: 100%;
+    }
+    header ul li {
+        margin: 0px 10px;
+    }
+    #projetos .quadrados {
+        top: 120px;
+    }
+    #projetos ul {
+        width: 100%;
+        margin-left: 0;
+    }
+}
